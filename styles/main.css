@@ -18,19 +18,26 @@ banner {
     width: fit-content;
     margin: auto;
     margin-top: 10rem;
+    margin-bottom: 5rem;
 }
 
 h1, h2, h3 {
     text-align: center;
+    margin: 0;
 }
 
 h1 {
     font-size: 3rem;
 }
 
+a {
+    color: inherit;
+}
 
 cards {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     width: fit-content;
@@ -60,6 +67,17 @@ a.card {
     text-decoration: none;
 }
 
+a.to-home {
+    position: fixed;
+    top: 0;
+    display: block;
+    width: fit-content;
+    height: 1rem;
+    color: inherit;
+    text-decoration: none;
+    padding: 1rem;
+}
+
 @media only screen and (max-width: 600px) {
     .card {
         width: 100%;
@@ -71,4 +89,28 @@ a.card {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
+}
+
+button {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    font: inherit;
+} 
+
+th, td {
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+th, tr:nth-child(even) {
+    background-color: #4c4c4c4a;
+}
+
+section {
+    width: fit-content;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 4rem;
 }
