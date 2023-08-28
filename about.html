@@ -4,14 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/454ba9771c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <title>Frederik Jatzkowski | About Me</title>
 </head>
 <body>
-    <a href="/" class="to-home"><i class="fa-solid fa-house"></i></a>
+    <a href="/" class="to-home" aria-label="back to home"><i class="fa-solid fa-house"></i></a>
     <banner>
         <h1>About Me</h1>
-        <h2>Work in progress...</h2>
     </banner>
+    <section>
+        <p>
+            Hello there! I'm Frederik Jatzkowski, a passionate Software Engineer based in Germany with an insatiable curiosity for all things tech.
+            Welcome to my corner of the digital world, where I'm excited to share my journey, experiences, and aspirations in the realm of software engineering.
+        </p>
+    </section>
+    <section>
+        <h2>
+            My personal Story
+        </h2>
+        <p>
+            Right now I am <span id="age"></span> years old.
+            <script>
+                const targetDate = new Date('1998-02-08');
+                const currentDate = new Date();
+                const timeDiff = currentDate - targetDate;
+                const yearsDiff = timeDiff / (1000 * 60 * 60 * 24 * 365.25);
+                const yearsSince = Math.floor(yearsDiff);
+
+                document.querySelector("#age").textContent = yearsSince.toString()
+            </script>
+            I started coding in my teenage years (back then still with Python) and it never let me go.
+            Even though I started to pursue a career in law and successfully completed the first step of german law school (Zwischenprüfung),
+            I never stopped diving into tech.
+            During law school I got involved in the tech startup
+            <a href="http://inteligon.com" target="_blank" rel="noopener noreferrer">Inteligon GmbH</a>
+            where I worked as Managing Director both in legal affairs and hands-on software development.
+            During 2018 and 2019 I took on the role of Director for IT at
+            <a href="http://elsa-germany.org" target="_blank" rel="noopener noreferrer">ELSA Germany</a>,
+            a non-profit network for law students with more than 11,000 members.
+            During these activities I learnt a lot about larger and more complex systems and communication with stakeholders and team members.
+        </p>
+        <p>
+            After completing the first part of law school,
+            I finally started to pursue an academic education in the field I loved most, computer science.
+            Thus, I enrolled in a bachelors program for Computer Science in 2020. 
+        </p>
+        <p>
+            During this program I first started working as Student Assistant at university
+            where I graded other student's homework.
+            In 2022 I was offered a position as Working Student at
+            <a href="http://check24.de/unternehmen" target="_blank" rel="noopener noreferrer">CHECK24</a>
+            which I happily accepted.
+            Shortly before receiving my bachelors degree I got promoted to Junior Software Developer.
+            In this role I learnt a lot more about enterprise level software engineering and collaboration in scrum teams.
+        </p>
+    </section>
+    <section>
+        <h2>Passions and Values</h2>
+        <p>
+           With regards to software engineering I have a deep passion for developing complex systems to the highest standards.
+           This includes the application of best practices in software engineering like the SOLID design principles,
+           reasoned architectures and well-directed testing strategies including unit and integration tests.
+        </p>
+        <p>
+            A key factor in software engineering are the tools one uses.
+            Famously, 70% of security bugs in Google Chrome were once attributed to unsafe memory handling in C and C++ (
+                <a href="https://www.zdnet.com/article/chrome-70-of-all-security-bugs-are-memory-safety-issues/" target="_blank" rel="noopener noreferrer">source</a>
+            ).
+            This goes to show, that even some of the most skilled engineers made a lot of mistakes because the language they used permitted it.
+            I want my tools, especially my programming languages, to prevent me from introducing as many bugs as possible.
+            Therefore I am a strong supporter of strong, static and expressive type systems as
+            these prevent the introduction of bugs and even tend to speed up development in sufficiently complex codebases. 
+            This is why I really admire languages like Rust and Golang.
+        </p>
+        <p>
+            Furthermore I think that professional software engineering requires at least as many communication skills 
+            as it requires technical known how.
+            The best engineers do not just write code for the computer to understand, but for people as well.
+            These people might be their co-workers or even themselves after some time has passed.
+            During my past experiences I have seen some codebases which worked functionally but turned out overly complex
+            and elaborated while trying to optimize for performance and/or adaptability.
+            In the end, almost none of these optimizations were really necessary and the same result could be achieved with only a fraction of the complexity.
+            While to some degree reasonable, excessive and premature optimizations almost always cause more harm than they prevent.
+            This is why I seek to keep complexity down if there is no compelling reason for it
+            and spend considerable time to find elegant and simple solutions as this investment will pay of in the long term.
+        </p>
+    </section>
+    <section>
+        <h2>Expertise and Learning</h2>
+        <p>
+            Because of my previous experience at CHECK24 I am most familiar with Golang
+            and its associated tools as well as database engineering.
+            I have honed my skills as a Golang Engineer by designing and implementing robust
+            and efficient solutions using the language's concurrency features and clean syntax.
+            One example would be <a href="/projects/index.html#hermes">Hermes</a>,
+            a TCP gateway with TLS termination which integrates certbot in order to fetch the required certificates automatically.
+            Furthermore I used a CI/CD-pipeline to make this distributable and easily installable as a docker container.
+        </p>
+        <p>
+            With hands-on experience in databases and SQL,
+            I've effectively managed and queried data in PostgreSQL and MySQL.
+            My expertise includes designing well-structured database schemas
+            and crafting optimized SQL queries for efficient data retrieval and manipulation.
+        </p>
+        <p>
+            I've contributed to the development of RESTful APIs, ensuring consistent and intuitive communication between applications.
+            I'm proficient in using OpenAPI specifications and Swagger tools to define API contracts,
+            making API documentation and consumption straightforward and reliable.
+        </p>
+        <p>
+            Even though I am aware of the dangers of unsafe languages like C and C++,
+            they can be very useful in specific roles.
+            For instance, I have leveraged the power of parallel GPU computing using CUDA-C++ in my bachelors thesis.
+            The main objective was to find fast algorithms for a NPO-hard problem,
+            which I mainly developed for modern high performance GPUs.
+            The GPU-version of one of the algorithms turned out over 1,900 times faster than the sequential CPU version written in C.
+        </p>
+        <p>
+            I have gained not only experience in backend or algorithm engineering but also frontend development.
+            From vanilla JavaScript to the robust type system of TypeScript,
+            I've leveraged these languages to create responsive user interfaces and efficient client-side logic.
+            My experience includes leveraging Svelte's component-based architecture
+            and reactivity model to create dynamic user interfaces with minimal overhead.
+            One example of this is the <a href="/projects/index.html#mythoskop">Mythoskop</a>
+            which was developed by a team of 6 students under my technical leadership.
+        </p>
+    </section>
+    <section>
+        <h2>
+            Outside Tech
+        </h2> 
+        <p>
+            Besides tech I really love nature.
+            This is why I am a passionate hiker, who really loves beeing out in the open,
+            from the Black Forest in Germany to the raw wilderness of scandinavia.
+            And I love it even more if I share those experiences with my friends and family.
+        </p>
+    </section>
+    <section>
+        I am looking forward to the next steps of my journey...
+    </section>
 </body>
 </html>

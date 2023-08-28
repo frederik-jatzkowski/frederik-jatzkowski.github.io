@@ -16,6 +16,7 @@ body {
 banner {
     display: block;
     width: fit-content;
+    max-width: 66%;
     margin: auto;
     margin-top: 10rem;
     margin-bottom: 5rem;
@@ -24,6 +25,10 @@ banner {
 h1, h2, h3 {
     text-align: center;
     margin: 0;
+}
+
+p {
+    text-align: justify;
 }
 
 h1 {
@@ -110,7 +115,7 @@ th, tr:nth-child(even) {
 
 section {
     width: fit-content;
-    max-width: 90%;
+    max-width: 66%;
     margin: auto;
     margin-bottom: 4rem;
 }
