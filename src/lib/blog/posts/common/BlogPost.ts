@@ -10,6 +10,6 @@ export default class BlogPost {
 		readonly intro: string,
 		readonly body: ComponentType<SvelteComponent>
 	) {
-		this.identifier = encodeURIComponent(title);
+		this.identifier = this.title.replaceAll(" ", "_");
 	}
 }

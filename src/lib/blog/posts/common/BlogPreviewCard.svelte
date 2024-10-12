@@ -8,7 +8,7 @@
 <a
 	class="max-w-sm overflow-hidden shadow-lg bg-amber-400 col-span-1"
 	id="outer"
-	href={`${base}/blog/${encodeURIComponent(post.title)}`}
+	href={`${base}/blog/${encodeURIComponent(post.identifier)}`}
 >
 	<!-- <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains" /> -->
 	<div class="px-6 py-4">

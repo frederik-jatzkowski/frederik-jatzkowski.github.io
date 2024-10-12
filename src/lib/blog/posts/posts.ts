@@ -12,5 +12,5 @@ export default POSTS;
 export const MAPPED_POSTS = new Map<string, BlogPost>();
 
 for (const post of POSTS) {
-	MAPPED_POSTS.set(post.title, post);
+	MAPPED_POSTS.set(post.identifier, post);
 }
