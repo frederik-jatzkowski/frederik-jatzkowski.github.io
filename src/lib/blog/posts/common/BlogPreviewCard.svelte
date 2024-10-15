@@ -16,7 +16,7 @@
 		<div class="text-xl mb-4 text-blue-900">{post.title}</div>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<img src={post.heroImage} />
-		<!-- <div class="text-base mb-2 text-amber-100">{post.subtitle}</div> -->
+		<!-- <div class="text-base mb-2 text-white">{post.subtitle}</div> -->
 		<p class="text-blue-900 text-base mt-4">
 			{post.intro}
 		</p>
