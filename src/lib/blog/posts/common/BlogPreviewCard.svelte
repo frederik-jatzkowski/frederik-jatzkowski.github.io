@@ -12,12 +12,12 @@
 >
 	<!-- <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains" /> -->
 	<div class="px-6 py-4">
-		<div class="text-xs text-blue-900">{post.date.toLocaleDateString()}</div>
-		<div class="text-xl mb-4 text-blue-900">{post.title}</div>
+		<div class="text-xs text-purple-900">{post.date.toLocaleDateString()}</div>
+		<div class="text-xl mb-4 text-purple-900">{post.title}</div>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<img src={post.heroImage} />
 		<!-- <div class="text-base mb-2 text-white">{post.subtitle}</div> -->
-		<p class="text-blue-900 text-base mt-4">
+		<p class="text-purple-900 text-base mt-4">
 			{post.intro}
 		</p>
 	</div>

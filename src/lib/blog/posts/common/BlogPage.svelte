@@ -1,17 +1,14 @@
 <script lang="ts">
-	import Img from '$lib/shared/presentation/img/Img.svelte';
-	import H2 from '$lib/shared/presentation/typography/H2.svelte';
-	import H3 from '$lib/shared/presentation/typography/H3.svelte';
 	import P from '$lib/shared/presentation/typography/P.svelte';
 	import type BlogPost from './BlogPost';
 
 	export let post: BlogPost;
 </script>
 
-<h2 class="font-sans text-3xl text-center text-white mb-4">
+<h2 class="font-sans text-3xl text-center text-purple-900 mb-4">
 	{post.title}
 </h2>
-<h3 class="font-sans text-xl text-center text-white mb-16">
+<h3 class="font-sans text-xl text-center text-purple-900 mb-16">
 	{post.subtitle}
 	<div class="h-px bg-amber-400 w-1/2 mx-auto mt-4" />
 </h3>
