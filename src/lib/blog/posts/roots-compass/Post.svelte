@@ -5,8 +5,9 @@
 </script>
 
 <P>
-	This project, developed for the Kiel University in collaboration with multimedia designer Anke
-	Tornow, aims to showcase the intricate connections between human societies, environments, and
+	This project, developed for the Kiel University in collaboration with multimedia designer
+	<A href="https://anketornow.de/" target="_blank">Anke Tornow</A>
+	, aims to showcase the intricate connections between human societies, environments, and
 	cultures over thousands of years. Our team has worked hard to create a portal that both experts
 	and the general public can explore with ease.
 </P>
