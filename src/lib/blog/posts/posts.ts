@@ -1,10 +1,12 @@
 import type BlogPost from './common/BlogPost';
 import ROOTS_COMPASS_POST from './roots-compass/post';
+import SEA24_POST from './sea24/post';
 
 const POSTS: BlogPost[] = [
 	ROOTS_COMPASS_POST,
+	SEA24_POST,
 ].sort((a, b) => {
-	return a.date.getTime() - b.date.getTime();
+	return b.date.getTime() - a.date.getTime();
 });
 
 export default POSTS;
