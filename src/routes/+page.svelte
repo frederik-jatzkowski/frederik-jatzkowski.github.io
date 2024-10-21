@@ -9,7 +9,7 @@
 </script>
 
 <section class="p-4 border-2 border-amber-400">
-	<div class="grid grid-cols-5 gap-2">
+	<div class="grid grid-cols-2 gap-2 lg:grid-cols-5">
 		<div class="col-span-3">
             <H2>About Me</H2>
 			<P>Software Engineer @ CHECK24, Germany</P>
@@ -18,7 +18,7 @@
 				| <A href="https://www.linkedin.com/in/frederik-jatzkowski/" target="_blank">LinkedIn</A>
 			</P>
 		</div>
-		<div class="col-span-2 grid grid-cols-2 gap-2">
+		<div class="col-span-2 grid grid-cols-1 gap-2 lg:grid-cols-2">
 			<Img
 				src={`${assets}/media/mittelerde24/speaking.jpg`}
 				caption="Speaking at the 5th Central German Meeting on Bioinformatics."
@@ -33,7 +33,7 @@
 
 <section class="mt-8 p-4 border-2 border-amber-400">
 	<H2>Latest Posts</H2>
-	<div class="grid grid-cols-4 gap-4">
+	<div class="grid grid-cols-1 gap-4  lg:grid-cols-4">
 		{#each POSTS.slice(0, 4) as post}
 			<BlogPreviewCard {post} />
 		{/each}

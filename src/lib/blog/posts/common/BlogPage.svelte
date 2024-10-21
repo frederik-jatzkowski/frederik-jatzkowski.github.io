@@ -14,10 +14,10 @@
 </h3>
 
 {#if post.heroImage}
-	<div class="grid grid-cols-3 gap-8 mb-8">
-        <div>
+	<div class="grid grid-cols-1 mb-8 lg:grid-cols-3 lg:gap-8">
+        <div class="col-span-1">
             <!-- svelte-ignore a11y-missing-attribute -->
-            <img src={post.heroImage} class="col-span-1 border-4 border-amber-400" />
+            <img src={post.heroImage} class="border-4 border-amber-400" />
         </div>
         <div class="col-span-2">
             <P>
