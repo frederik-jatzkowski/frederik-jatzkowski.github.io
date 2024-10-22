@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="bg-purple-50">
+	<head>
+		<meta charset="utf-8" /><link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
+		<link rel="manifest" href="../icon/site.webmanifest">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.JVt91dTd.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.BNbYYvts.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.BPFQaRrH.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.BfJEPAwo.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.HDPc9lbm.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.B4K5mxo1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.XIGGrj6i.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.DmTFNtzf.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.Dv0l7o9Y.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.U-DHwMYf.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/posts.CVXxWdyX.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <header class="px-8 py-2 sticky top-0 left-0 right-0 bg-purple-900 shadow-2xl grid grid-cols-1 lg:px-32 lg:grid-cols-4 md:grid-cols-4" data-svelte-h="svelte-19hif1f"><a href="/" class="col-span-1"><h1 class="font-sans text-center text-white">Frederik Jatzkowski</h1> <div class="h-px bg-amber-400 mt-1"></div></a></header> <main class="container mx-auto px-8 py-8 lg:px-32 "><article><h2 class="font-sans text-3xl text-center text-purple-900 mb-4">Publishing my First Paper</h2> <h3 class="font-sans text-xl text-center text-purple-900 mb-16">Barcode Selection and Layout Optimization in Spatial Transcriptomics <div class="h-px bg-amber-400 w-1/2 mx-auto mt-4"></div></h3> <div class="grid grid-cols-1 mb-8 lg:grid-cols-3 lg:gap-8"><div class="col-span-1"> <img src="/media/sea24/photolitography.png" class="border-4 border-amber-400"></div> <div class="col-span-2"><p class="font-sans text-base text-justify py-2 text-purple-950">I’m thrilled to announce that
+	my recent paper, “Barcode Selection and Layout Optimization in Spatial Transcriptomics,” has been
+	published in the proceedings of the 22nd International Symposium on Experimental Algorithms (SEA
+	2024), which took place in beautiful Vienna, Austria.</p></div></div> <p class="font-sans text-base text-justify py-2 text-purple-950">Even more exciting, the paper was honored with the Best Paper Award at the conference! This
+	achievement marks a major milestone in my professional journey, as the work is primarily derived
+	from the results of my bachelor’s thesis. The research was guided by my excellent supervisors,
+	<a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="https://www.informatik.uni-halle.de/arbeitsgruppen/datenstrukturen/mitarbeiter/muellerh/" target="_blank">Prof. Dr. Matthias Müller-Hannemann</a>
+	and
+	<a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="https://www.informatik.uni-halle.de/arbeitsgruppen/datenstrukturen/mitarbeiter/steffen_schueler/" target="_blank">Dr. Steffen Schüler</a>
+	, from the Data Structures and Efficient Algorithms group at Martin Luther University Halle-Wittenberg.
+	I was also fortunate to collaborate with brilliant researchers
+	<a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="https://www.informatik.uni-halle.de/arbeitsgruppen/datenstrukturen/mitarbeiter/schmidt/" target="_blank">Antonia Schmidt</a>
+	and Robert Mank, whose contributions were instrumental to our success.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">The Problem: Spatial Transcriptomics and Barcode Layout Optimization <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">Our paper addresses a unique and challenging optimization problem in the context of spatial
+	transcriptomics, an exciting field that enables high-resolution spatial mapping of gene
+	expression. At the heart of this problem is the selection and layout of barcodes—short DNA
+	sequences that act as unique identifiers within a two-dimensional microarray. The arrays in
+	question are enormous, with typical dimensions of 768×1024, which means over 786,000 barcodes need
+	to be placed optimally.</p> <p class="font-sans text-base text-justify py-2 text-purple-950">The goal is to assign barcodes to positions on the microarray in a way that minimizes a
+	position-dependent cost function. In essence, we need to solve a very specialized version of the
+	quadratic assignment problem (QAP), which is known for its computational complexity. Not only is
+	the general QAP difficult, but we also demonstrated that the barcode layout problem is
+	MaxSNP-hard, meaning it’s also hard to approximate.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">Approach and Results: Heuristics and CUDA for Faster Runtime <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">Given the complexity of the problem, exact methods like Integer Linear Programming (ILP) are
+	infeasible for large instances—think solving for over 786,000 variables! While ILP can
+	theoretically yield optimal results, it’s only applicable to very small-scale cases. To tackle
+	realistic, large-scale instances, we developed a set of heuristics, including:
+	<ul class="list-disc pl-8" data-svelte-h="svelte-obtrjr"><li>A sorting-based algorithm</li> <li>A greedy algorithm</li> <li>2-OPT-based local search</li> <li>A genetic algorithm</li></ul>
+	Among these, we found that a combination of the greedy algorithm and 2-OPT local search yielded the
+	best results in terms of both solution quality and runtime. On large-scale arrays, our methods achieved
+	an impressive 37% reduction in cost compared to random layouts and computed solutions in under 3 minutes.
+	This was made possible thanks to CUDA-based optimizations, which allowed us to significantly accelerate
+	runtime by utilizing GPU parallel processing. By offloading computation to GPUs, we were able to efficiently
+	handle the large-scale nature of the problem while maintaining high-quality results.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">Exploiting Barcode Surplus and Biochemical Constraints <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">One particularly interesting aspect of our research was the surplus of barcodes. Since the pool of
+	possible barcodes is much larger than the number actually needed, we explored the impact of
+	selecting barcodes from this larger set. By incorporating surplus barcodes, we were able to
+	significantly improve the layout quality, though this came with a slight increase in runtime.</p> <p class="font-sans text-base text-justify py-2 text-purple-950">Another noteworthy discovery was that biochemical constraints, which limit the barcode design
+	space, were actually beneficial for the overall layout cost. These constraints, rather than
+	hindering the process, helped reduce complexity in the layout optimization, leading to better
+	solutions.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">Conclusion and Looking Ahead <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">The journey from my bachelor’s thesis to an award-winning paper has been both challenging and
+	rewarding. I’m deeply grateful for the guidance and support from my supervisors and collaborators,
+	as well as the opportunity to present this work at SEA 2024 in Vienna. The results of our research
+	show promising advances in solving large-scale combinatorial optimization problems, and I’m
+	excited about future applications in spatial transcriptomics and beyond.</p> <p class="font-sans text-base text-justify py-2 text-purple-950"><ul class="list-disc pl-8"><li><a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="https://doi.org/10.4230/LIPIcs.SEA.2024.17" target="_blank">If you’d like to dive deeper into the technical details, you can find the paper in the
+				Leibniz International Proceedings in Informatics (LIPIcs) series</a>.</li> <li><a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="https://github.com/uni-halle/BarLay" target="_blank">The CUDA optimized C++ implementations of the algorithms described in the paper can be found
+				here.</a>.</li> <li><a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="https://sea2024.univie.ac.at/" target="_blank">Find out more about the SEA24 conference!</a></li></ul></p></article></main> <footer class="mx-auto px-8 py-2 bg-purple-900 lg:px-32 lg:grid-cols-8 md:grid-cols-4" data-svelte-h="svelte-lvb7fy"><p class="text-amber-400 text-sm">© 2024 Frederik Jatzkowski. All Rights Reserved</p> </footer> 
+			
+			<script>
+				{
+					__sveltekit_1o9srlh = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.BNbYYvts.js"),
+						import("../_app/immutable/entry/app.B4K5mxo1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
