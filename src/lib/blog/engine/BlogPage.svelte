@@ -1,7 +1,7 @@
 <script lang="ts">
 	import H2 from '$lib/shared/presentation/typography/H2.svelte';
 	import P from '$lib/shared/presentation/typography/P.svelte';
-	import POSTS from '../posts';
+	import POSTS from '../posts/posts';
 	import type BlogPost from './BlogPost';
 	import BlogPreviewCard from './BlogPreviewCard.svelte';
 

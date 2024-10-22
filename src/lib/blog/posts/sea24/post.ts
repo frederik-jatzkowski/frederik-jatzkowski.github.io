@@ -1,5 +1,5 @@
 import { assets } from '$app/paths';
-import BlogPost from '../common/BlogPost';
+import BlogPost from '../../engine/BlogPost';
 import Post from './Post.svelte';
 
 const SEA24_POST = new BlogPost(

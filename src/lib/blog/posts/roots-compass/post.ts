@@ -1,5 +1,5 @@
 import { assets } from '$app/paths';
-import BlogPost from '../common/BlogPost';
+import BlogPost from '../../engine/BlogPost';
 import Post from './Post.svelte';
 
 const ROOTS_COMPASS_POST = new BlogPost(

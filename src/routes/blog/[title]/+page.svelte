@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BlogPage from '$lib/blog/posts/common/BlogPage.svelte';
+	import BlogPage from '$lib/blog/engine/BlogPage.svelte';
 
 	import type { PageData } from './$types';
 

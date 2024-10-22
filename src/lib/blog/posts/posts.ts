@@ -1,4 +1,4 @@
-import type BlogPost from './common/BlogPost';
+import type BlogPost from '../engine/BlogPost';
 import MITTELERDE24_POST from './mittelerde24/post';
 import ROOTS_COMPASS_POST from './roots-compass/post';
 import SEA24_POST from './sea24/post';
