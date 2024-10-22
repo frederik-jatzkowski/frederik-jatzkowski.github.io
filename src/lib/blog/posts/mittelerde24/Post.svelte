@@ -5,11 +5,6 @@
 	import P from '$lib/shared/presentation/typography/P.svelte';
 </script>
 
-<P>
-	This was a fantastic chance to share the progress and initial findings from my work and to connect
-	with other bioinformatics researchers working on related challenges.
-</P>
-
 <H4>The Problem: Reducing Errors in Barcode Synthesis</H4>
 <P>
 	Spatial transcriptomics is a powerful technique for mapping gene expression across tissue samples.
