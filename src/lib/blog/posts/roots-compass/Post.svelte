@@ -1,6 +1,5 @@
 <script lang="ts">
 	import A from '$lib/shared/presentation/typography/A.svelte';
-	import H2 from '$lib/shared/presentation/typography/H2.svelte';
 	import P from '$lib/shared/presentation/typography/P.svelte';
 </script>
 
