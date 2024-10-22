@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="bg-purple-50">
+	<head>
+		<meta charset="utf-8" /><link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
+		<link rel="manifest" href="../icon/site.webmanifest">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.BXuBYoJh.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/H2.De1zmOPj.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.OW7Wf9zG.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.6Twzf0vX.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.BfJEPAwo.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.3EtBHCFv.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.CTusVuOK.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.BWJqtTvX.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.BPSdmwdD.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/3.X9MrU28f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.B_9vBlEE.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/H2.DdULDlnl.js"><title>Talk at Jena University</title><!-- HEAD_svelte-wrxmrk_START --><meta name="description" content="I recently had the opportunity to present my research at the 5th Central German Meeting on Bioinformatics,
+	hosted by the University of Jena. My talk, titled &quot;Barcode Layout Optimization in Spatial Transcriptomics:
+	Theory and Experiments,&quot; focused on a novel approach to optimizing barcode layouts to reduce errors in spatial transcriptomics.
+	This was a fantastic chance to share the progress and initial findings from my work and to connect
+	with other bioinformatics researchers working on related challenges."><!-- HEAD_svelte-wrxmrk_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <header class="px-8 py-2 sticky top-0 left-0 right-0 bg-purple-900 shadow-2xl grid grid-cols-1 lg:px-32 lg:grid-cols-4 md:grid-cols-4" style="z-index: 100;" data-svelte-h="svelte-1lyjqi8"><a href="/" class="col-span-1"><h1 class="font-sans text-center text-white">Frederik Jatzkowski</h1> <div class="h-px bg-amber-400 mt-1"></div></a></header> <main class="container mx-auto px-8 py-8 lg:px-32 "> <article><h2 class="font-sans text-3xl text-center text-purple-900 mb-4">Talk at Jena University</h2> <h3 class="font-sans text-xl text-center text-purple-900 mb-8">Barcode Layout Optimization in Spatial Transcriptomics <div class="h-px bg-amber-400 w-1/2 mx-auto mt-4"></div></h3> <time datetime="Fri Mar 01 2024" class="block my-4">1.3.2024</time> <div class="grid grid-cols-1 mb-8 lg:grid-cols-3 lg:gap-8"><div class="col-span-1"> <img src="/media/mittelerde24/speaking_landscape.jpg" class="border-4 border-amber-400"></div> <div class="col-span-2"><p class="font-sans text-base text-justify py-2 text-purple-950">I recently had the opportunity to present my research at the 5th Central German Meeting on Bioinformatics,
+	hosted by the University of Jena. My talk, titled "Barcode Layout Optimization in Spatial Transcriptomics:
+	Theory and Experiments," focused on a novel approach to optimizing barcode layouts to reduce errors in spatial transcriptomics.
+	This was a fantastic chance to share the progress and initial findings from my work and to connect
+	with other bioinformatics researchers working on related challenges.</p></div></div> <p class="font-sans text-base text-justify py-2 text-purple-950">This was a fantastic chance to share the progress and initial findings from my work and to connect
+	with other bioinformatics researchers working on related challenges.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">The Problem: Reducing Errors in Barcode Synthesis <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">Spatial transcriptomics is a powerful technique for mapping gene expression across tissue samples.
+	It relies on applying transcripts to an array with 1024×768 features, where each transcript is
+	tagged with a unique DNA barcode. After sequencing, these barcodes are used to trace the spatial
+	origin of each transcript.</p> <p class="font-sans text-base text-justify py-2 text-purple-950">However, the process of synthesizing barcodes on such arrays—using photolithography—can introduce
+	significant errors. It’s estimated that up to 20% of bases may contain synthesis errors, often due
+	to neighbor effects caused by scattered or diffracted light during the synthesis process. These
+	errors make it difficult to correctly assign transcripts to their corresponding barcodes,
+	complicating the gene expression analysis.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">Our Approach: Optimizing Barcode Layouts <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">In my talk, I discussed how our research addresses this problem by focusing on barcode layout
+	optimization. The goal is to minimize the similarity between neighboring barcodes, reducing the
+	likelihood of synthesis errors affecting adjacent features on the array. This gives rise to a
+	complex combinatorial optimization problem.</p> <p class="font-sans text-base text-justify py-2 text-purple-950">We demonstrated that this problem is MaxSNP-hard, meaning it’s computationally challenging to
+	solve optimally or even to approximate. While Integer Linear Programming (ILP) formulations could,
+	in theory, yield optimal solutions, they are only feasible for very small instances. For larger
+	arrays, like the ones used in spatial transcriptomics, we turned to heuristic algorithms capable
+	of computing near-optimal layouts.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">Heuristic Solutions and GPU Acceleration <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">Our research has developed several heuristic algorithms, including:
+	<ul class="list-disc pl-8" data-svelte-h="svelte-44mn7l"><li>A sorting-based algorithm</li> <li>A greedy algorithm</li> <li>A genetic algorithm</li></ul>
+	The most promising results so far come from the greedy algorithm, which we accelerated using GPU processing.
+	This GPU-accelerated approach significantly reduced runtime while still producing high-quality layouts.
+	For large-scale arrays with 1024×768 features, the greedy algorithm achieved a 35-40% improvement in
+	layout quality over random layouts, with solutions computed in about 15 seconds. These results suggest
+	that our methods could be applicable to real-world scenarios where speed and accuracy are critical.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">Reflections on the Presentation <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">The response to my talk was very encouraging. Attendees expressed interest in the potential
+	applications of this research to other areas of bioinformatics and gene expression analysis. There
+	were also great questions and discussions about possible future directions, including how further
+	refinements in the heuristic algorithms might push the performance even higher.</p> <p class="font-sans text-base text-justify py-2 text-purple-950">Presenting at the 5th Central German Meeting on Bioinformatics was a valuable experience, allowing
+	me to gain feedback from the broader research community and further develop ideas for the next
+	phase of the project. I&#39;m looking forward to exploring additional avenues for improving barcode
+	layout optimization and seeing how these methods might impact the field of spatial
+	transcriptomics.</p> <h4 class="font-sans text-xl text-left py-2 text-purple-900 my-4">Acknowledgements <div class="h-px bg-amber-400 w-1/2 mt-1"></div></h4> <p class="font-sans text-base text-justify py-2 text-purple-950">I’d like to express my gratitude to my supervisors, Prof. Dr. Matthias Müller-Hannemann and Dr.
+	Steffen Schüler and Antonia Schmidt for the great collaboration. This work would not have been
+	possible without their expertise and encouragement.</p> <p class="font-sans text-base text-justify py-2 text-purple-950">Additional Information:
+	<ul class="list-disc pl-8"><li><a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="https://mittelerde-meeting.uni-jena.de/" target="_blank">The website of the 5th Central German Meeting on Bioinformatics.</a></li> <li><a class="font-sans text-base text-justify py-2 text-purple-900/70 hover:text-purple-900 underline decoration-amber-400" href="../media/mittelerde24/presentation.pdf" target="_blank">The slides of the talk.</a></li></ul></p></article> <section class="mt-8 p-4 border-2 border-amber-400"><h2 class="font-sans text-2xl text-left py-2 text-purple-900 mb-4">Further Reading <div class="h-px bg-amber-400 w-1/4 mt-1"></div></h2> <div class="grid grid-cols-1 gap-4 lg:grid-cols-4"><a class="max-w-sm overflow-hidden shadow-lg bg-amber-400 col-span-1 svelte-wdz3tv" id="outer" href="../blog/Bringing_the_Past_to_Life"> <div class="px-6 py-4"><div class="text-xs text-purple-900">22.8.2024</div> <div class="text-xl mb-4 text-purple-900">Bringing the Past to Life</div>  <img src="/media/roots-compass/map_view.webp">  <p class="text-purple-900 text-base mt-4">I am excited to share the launch of the ROOTS Compass,
+    an innovative online platform that offers interactive access
+    to the wide range of multidisciplinary research carried out
+    by the Cluster of Excellence ROOTS.</p></div> </a><a class="max-w-sm overflow-hidden shadow-lg bg-amber-400 col-span-1 svelte-wdz3tv" id="outer" href="../blog/Publishing_my_First_Paper"> <div class="px-6 py-4"><div class="text-xs text-purple-900">24.7.2024</div> <div class="text-xl mb-4 text-purple-900">Publishing my First Paper</div>  <img src="/media/sea24/photolitography.png">  <p class="text-purple-900 text-base mt-4">I’m thrilled to announce that
+	my recent paper, “Barcode Selection and Layout Optimization in Spatial Transcriptomics,” has been
+	published in the proceedings of the 22nd International Symposium on Experimental Algorithms (SEA
+	2024), which took place in beautiful Vienna, Austria.</p></div> </a></div></section></main> <footer class="mx-auto px-8 py-2 bg-purple-900 lg:px-32 lg:grid-cols-8 md:grid-cols-4" data-svelte-h="svelte-lvb7fy"><p class="text-amber-400 text-sm">© 2024 Frederik Jatzkowski. All Rights Reserved</p> </footer> 
+			
+			<script>
+				{
+					__sveltekit_16e3a6o = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.OW7Wf9zG.js"),
+						import("../_app/immutable/entry/app.CTusVuOK.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
