@@ -13,7 +13,7 @@
 </svelte:head>
 
 <section class="p-4 border-2 border-amber-400">
-	<div class="grid grid-cols-2 gap-2 lg:grid-cols-5">
+	<div class="grid grid-cols-2 gap-2 lg:grid-cols-5 md:grid-cols-5">
 		<div class="col-span-3">
 			<H2>About Me</H2>
 			<P>Software Engineer @ CHECK24, Germany</P>
@@ -37,7 +37,7 @@
 
 <section class="mt-8 p-4 border-2 border-amber-400">
 	<H2>Latest Posts</H2>
-	<div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
+	<div class="grid grid-cols-1 gap-4 lg:grid-cols-4  md:grid-cols-2">
 		{#each POSTS.slice(0, 4) as post}
 			<BlogPreviewCard {post} />
 		{/each}

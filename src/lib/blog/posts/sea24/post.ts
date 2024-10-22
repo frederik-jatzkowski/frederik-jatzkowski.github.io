@@ -1,4 +1,5 @@
 import { assets } from '$app/paths';
+import Keyword from '$lib/blog/keywords';
 import BlogPost from '../../engine/BlogPost';
 import Post from './Post.svelte';
 
@@ -11,7 +12,8 @@ const SEA24_POST = new BlogPost(
 	my recent paper, “Barcode Selection and Layout Optimization in Spatial Transcriptomics,” has been
 	published in the proceedings of the 22nd International Symposium on Experimental Algorithms (SEA
 	2024), which took place in beautiful Vienna, Austria.`,
-	Post
+	Post,
+	[Keyword.ALGORITHM, Keyword.CUDA]
 );
 
 export default SEA24_POST;

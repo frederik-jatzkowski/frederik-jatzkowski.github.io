@@ -1,4 +1,5 @@
 import { assets } from '$app/paths';
+import Keyword from '$lib/blog/keywords';
 import BlogPost from '../../engine/BlogPost';
 import Post from './Post.svelte';
 
@@ -11,7 +12,8 @@ const MITTELERDE24_POST = new BlogPost(
 	hosted by the University of Jena.
 	This was a fantastic chance to share the progress and initial findings from my work and to connect
 	with other bioinformatics researchers working on related challenges.`,
-	Post
+	Post,
+	[Keyword.ALGORITHM, Keyword.CUDA]
 );
 
 export default MITTELERDE24_POST;

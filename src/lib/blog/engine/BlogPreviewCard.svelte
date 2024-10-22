@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type BlogPost from './BlogPost';
+	import KeywordBadge from './KeywordBadge.svelte';
 
 	export let post: BlogPost;
 </script>
@@ -17,9 +18,12 @@
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<img src={post.heroImage} />
 		<!-- <div class="text-base mb-2 text-white">{post.subtitle}</div> -->
-		<p class="text-purple-900 text-base mt-4">
+		<p class="text-purple-900 text-base my-4">
 			{post.intro}
 		</p>
+		{#each post.keywords as keyword}
+			<KeywordBadge {keyword} />
+		{/each}
 	</div>
 </a>
 

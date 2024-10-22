@@ -4,13 +4,14 @@
 	import POSTS from '../posts/posts';
 	import type BlogPost from './BlogPost';
 	import BlogPreviewCard from './BlogPreviewCard.svelte';
+	import KeywordBadge from './KeywordBadge.svelte';
 
 	export let post: BlogPost;
 </script>
 
 <svelte:head>
 	<title>{post.title}</title>
-	<meta name="description" content={post.intro}>
+	<meta name="description" content={post.intro} />
 </svelte:head>
 
 <article>
@@ -21,6 +22,10 @@
 		{post.subtitle}
 		<div class="h-px bg-amber-400 w-1/2 mx-auto mt-4" />
 	</h3>
+	{#each post.keywords as keyword}
+		<KeywordBadge {keyword} />
+	{/each}
+
 	<time datetime={post.date.toDateString()} class="block my-4">
 		{post.date.toLocaleDateString()}
 	</time>
@@ -49,7 +54,7 @@
 <section class="mt-8 p-4 border-2 border-amber-400">
 	<H2>Further Reading</H2>
 	<div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
-		{#each POSTS.filter((each) => each.identifier != post.identifier).slice(0, 4)  as post}
+		{#each POSTS.filter((each) => each.identifier != post.identifier).slice(0, 4) as post}
 			<BlogPreviewCard {post} />
 		{/each}
 	</div>

@@ -2,8 +2,8 @@
 	import '../app.css';
 </script>
 
-<header class="px-8 py-2 sticky top-0 left-0 right-0 bg-purple-900 shadow-2xl grid grid-cols-1 lg:px-32 lg:grid-cols-4 md:grid-cols-4" style="z-index: 100;">
-    <a href="/" class="col-span-1">
+<header class="py-2 sticky top-0 left-0 right-0 bg-purple-900 shadow-mxl grid grid-cols-1" style="z-index: 100;">
+    <a href="/" class="mx-auto">
         <h1 class="font-sans text-center text-white">Frederik Jatzkowski</h1>
         <div class="h-px bg-amber-400 mt-1"/>
     </a>
